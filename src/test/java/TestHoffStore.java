@@ -32,7 +32,7 @@ public class TestHoffStore {
         driver.quit();
     }
 
-        @Test(dataProvider = "Samsung S5")
+    @Test(dataProvider = "Samsung S5")
     void testApple(String productType, double productPrice) {
 
         int amountOfItemsToBuy = 1;
