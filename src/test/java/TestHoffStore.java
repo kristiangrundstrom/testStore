@@ -68,12 +68,15 @@ public class TestHoffStore {
         double actualVATAfterSellingAllProducts = store.getTotalVATFromReceipt();
         double actualPriceAfterSellingAllProducts = store.getTotalSumFromReceipt();
 
+        // Kolla även om money är tillbaka på 10.000
+
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price for " + productType + " is not matching the total price on the receipt.");
         softAssert.assertEquals(actualVat, expectedVat, "Wrong VAT was calculated for " + productType);
         softAssert.assertEquals(actualMoneyLeftAfterPurchase, expectedMoneyLeftAfterPurchase, "Wrong amount of money for " + productType + " was deducted than expected.");
         softAssert.assertEquals(actualVATAfterSellingAllProducts, 0.0, "VAT should be 0.0 after selling " + productType);
         softAssert.assertEquals(actualPriceAfterSellingAllProducts, 0.0, "Total price should be 0.0 after selling " + productType);
+        softAssert.assertEquals(store.getCurrentAmountOfMoney(), 10000.0, "Not all money was returned to inital sum of 10.000:-");
         softAssert.assertAll();
     }
 

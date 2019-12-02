@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13c47f86-9c49-47f7-99cc-f1a8e87698a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductReceiptLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductReceiptLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestHoffStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestHoffStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ProductReceiptLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ProductReceiptLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Receipt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Receipt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestHoffStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestHoffStore.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestHoffStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="189">
+              <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,9 +31,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/PageObjectStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="27" column="17" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1143#1144#0" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ProductReceiptLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="68">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,23 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="testautomatisering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testautomatisering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testautomatisering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testautomatisering" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -172,12 +161,29 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="testautomatisering" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testautomatisering" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testautomatisering" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testautomatisering" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575268647884" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575283331568" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -311,23 +317,12 @@
       <workItem from="1574877949891" duration="5920000" />
       <workItem from="1574935142825" duration="20395000" />
       <workItem from="1575030014346" duration="13546000" />
-      <workItem from="1575265959191" duration="2684000" />
+      <workItem from="1575265959191" duration="3013000" />
+      <workItem from="1575282747500" duration="584000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_default_ - 2019.12.02 at 07h 06m 44s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2019.12.02 at 07h 12m 58s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2019.12.02 at 07h 14m 03s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2019.12.02 at 07h 15m 38s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_default_ - 2019.12.02 at 07h 18m 06s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
@@ -346,15 +341,27 @@
     <history-entry file="_default_ - 2019.12.02 at 07h 36m 37s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="_default_ - 2019.12.02 at 11h 35m 04s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.12.02 at 11h 37m 49s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.12.02 at 11h 41m 07s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.12.02 at 11h 41m 26s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75584000" />
+    <option name="totallyTimeSpent" value="76497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49722221" visible="true" weight="0.30268458" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49722221" visible="true" weight="0.3067114" />
       <window_info id="Structure" order="1" sideWeight="0.50277776" side_tool="true" weight="0.2946309" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,7 +370,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50070924" side_tool="true" weight="0.2946309" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8449665" visible="true" weight="0.39716312" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8449665" visible="true" weight="0.55886525" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -404,37 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PageObjectStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding>
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProductReceiptLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Receipt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -445,10 +421,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ProductReceiptLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PageObjectStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestHoffStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="189">
+          <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
