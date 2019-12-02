@@ -1,22 +1,16 @@
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TestHoffStore {
 
     String url = "http://hoff.app/store";
     ChromeDriver driver;
     PageObjectStore store;
-    WebDriverWait wait;
-    List<Product> allProducts;
+    List<Product> allProducts = new ArrayList<>();
 
     @BeforeClass
     public void setup() {
@@ -27,13 +21,26 @@ public class TestHoffStore {
         allProducts = store.getAllProducts();
     }
 
+    @AfterMethod
+    public void refresh() {
+        driver.navigate().refresh();
+    }
+
     @AfterClass
     public void teardown() {
         driver.quit();
     }
 
-    @Test(dataProvider = "Samsung S5")
-    void testApple(String productType, double productPrice) {
+    @DataProvider(name = "Products")
+    public Object[] allProducts() {
+        return allProducts.toArray();
+    }
+
+    @Test(dataProvider = "Products")
+    void testApple(Product product) {
+
+        String productType = product.getType();
+        double productPrice = product.getPrice();
 
         int amountOfItemsToBuy = 1;
         double initialSumOfMoney = store.getCurrentAmountOfMoney();
@@ -45,7 +52,7 @@ public class TestHoffStore {
         double actualMoneyLeftAfterPurchase = store.getCurrentAmountOfMoney();
 
         List<ProductReceiptLine> productReceiptLines = new ArrayList<>();
-        productReceiptLines.add(new ProductReceiptLine(new Product(productType, productPrice), amountOfItemsToBuy));
+        productReceiptLines.add(new ProductReceiptLine(product, amountOfItemsToBuy));
 
         Receipt receipt = new Receipt();
         receipt.setVat(0.25);
@@ -62,78 +69,13 @@ public class TestHoffStore {
         double actualPriceAfterSellingAllProducts = store.getTotalSumFromReceipt();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price is not matching the total price on the receipt.");
-        softAssert.assertEquals(actualVat, expectedVat, "Wrong VAT was calculated for" + productType);
-        softAssert.assertEquals(actualMoneyLeftAfterPurchase, expectedMoneyLeftAfterPurchase, "Wrong amount of money was deducted than expected.");
-        softAssert.assertEquals(actualVATAfterSellingAllProducts, 0.0, "VAT should be 0.0 after selling all products!");
-        softAssert.assertEquals(actualPriceAfterSellingAllProducts, 0.0, "Total price should be 0.0 after selling all products!");
+        softAssert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price for " + productType + " is not matching the total price on the receipt.");
+        softAssert.assertEquals(actualVat, expectedVat, "Wrong VAT was calculated for " + productType);
+        softAssert.assertEquals(actualMoneyLeftAfterPurchase, expectedMoneyLeftAfterPurchase, "Wrong amount of money for " + productType + " was deducted than expected.");
+        softAssert.assertEquals(actualVATAfterSellingAllProducts, 0.0, "VAT should be 0.0 after selling " + productType);
+        softAssert.assertEquals(actualPriceAfterSellingAllProducts, 0.0, "Total price should be 0.0 after selling " + productType);
         softAssert.assertAll();
     }
 
-
-    public Product findProductByName(String productType) {
-        return store.getAllProducts().stream()
-                .filter(product -> productType.equalsIgnoreCase(product.getType())).collect(Collectors.toList()).get(0);
-    }
-
-    @DataProvider(name = "Apple")
-    public Object[][] provideApple() {
-        Product product = findProductByName("Apple");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Banana")
-    public Object[][] provideBanana() {
-        Product product = findProductByName("Banana");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Orange")
-    public Object[][] provideOrange() {
-        Product product = findProductByName("Orange");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Grape")
-    public Object[][] provideGrape() {
-        Product product = findProductByName("Grape");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Bicycle")
-    public Object[][] provideBicycle() {
-        Product product = findProductByName("Bicycle");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Samsung S5")
-    public Object[][] provideSamsungS5() {
-        Product product = findProductByName("Samsung S5");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Toy train")
-    public Object[][] provideToytrain() {
-        Product product = findProductByName("Toy train");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Cup of Coffee")
-    public Object[][] provideCupOfCoffee() {
-        Product product = findProductByName("Cup of Coffee");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "Chair")
-    public Object[][] provideChair() {
-        Product product = findProductByName("Chair");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
-
-    @DataProvider(name = "TV")
-    public Object[][] provideTV() {
-        Product product = findProductByName("TV");
-        return new Object[][]{{product.getType(), product.getPrice()}};
-    }
 }
 

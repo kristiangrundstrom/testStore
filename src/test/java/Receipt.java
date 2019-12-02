@@ -1,30 +1,17 @@
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class Receipt {
 
     private List<ProductReceiptLine> productReceiptLines;
     private double vat;
     private double totalPrice;
 
-    public List<ProductReceiptLine> getProductReceiptLines() {
-        return productReceiptLines;
-    }
-
     public void setProductReceiptLines(List<ProductReceiptLine> productReceiptLines) {
         this.productReceiptLines = productReceiptLines;
         setTotalPrice();
-    }
-
-    public double getVat() {
-        return this.vat;
-    }
-
-    public void setVat(double vat) {
-        this.vat = vat;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
     }
 
     public void setTotalPrice() {
