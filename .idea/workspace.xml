@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13c47f86-9c49-47f7-99cc-f1a8e87698a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestHoffStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestHoffStore.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestHoffStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
+            <state relative-caret-position="813">
+              <caret line="71" column="125" selection-start-line="71" selection-start-column="125" selection-end-line="71" selection-end-column="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575283331568" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575283448899" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -318,7 +317,7 @@
       <workItem from="1574935142825" duration="20395000" />
       <workItem from="1575030014346" duration="13546000" />
       <workItem from="1575265959191" duration="3013000" />
-      <workItem from="1575282747500" duration="584000" />
+      <workItem from="1575282747500" duration="701000" />
     </task>
     <servers />
   </component>
@@ -355,7 +354,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76497000" />
+    <option name="totallyTimeSpent" value="76614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -370,7 +369,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50070924" side_tool="true" weight="0.2946309" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8449665" visible="true" weight="0.55886525" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8449665" weight="0.55886525" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -455,8 +454,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestHoffStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
+        <state relative-caret-position="813">
+          <caret line="71" column="125" selection-start-line="71" selection-start-column="125" selection-end-line="71" selection-end-column="125" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

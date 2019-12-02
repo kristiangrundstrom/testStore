@@ -39,16 +39,13 @@ public class TestHoffStore {
     @Test(dataProvider = "Products")
     void testApple(Product product) {
 
-        String productType = product.getType();
-        double productPrice = product.getPrice();
-
         int amountOfItemsToBuy = 1;
         double initialSumOfMoney = store.getCurrentAmountOfMoney();
-        store.selectProductToPurchase(productType);
+        store.selectProductToPurchase(product.getType());
         store.setNumberOfItemsToBuy(amountOfItemsToBuy);
         store.clickBuyButton();
 
-        double expectedMoneyLeftAfterPurchase = (initialSumOfMoney - (productPrice * amountOfItemsToBuy));
+        double expectedMoneyLeftAfterPurchase = (initialSumOfMoney - (product.getPrice() * amountOfItemsToBuy));
         double actualMoneyLeftAfterPurchase = store.getCurrentAmountOfMoney();
 
         List<ProductReceiptLine> productReceiptLines = new ArrayList<>();
@@ -68,13 +65,11 @@ public class TestHoffStore {
         double actualVATAfterSellingAllProducts = store.getTotalVATFromReceipt();
         double actualPriceAfterSellingAllProducts = store.getTotalSumFromReceipt();
 
-        // Kolla även om money är tillbaka på 10.000
-
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price for " + productType + " is not matching the total price on the receipt.");
-        softAssert.assertEquals(actualVat, expectedVat, "Wrong VAT was calculated for " + productType);
-        softAssert.assertEquals(actualMoneyLeftAfterPurchase, expectedMoneyLeftAfterPurchase, "Wrong amount of money for " + productType + " was deducted than expected.");
-        softAssert.assertEquals(actualVATAfterSellingAllProducts, 0.0, "VAT should be 0.0 after selling " + productType);
+        softAssert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price for " + product.getType() + " is not matching the total price on the receipt.");
+        softAssert.assertEquals(actualVat, expectedVat, "Wrong VAT was calculated for " + product.getType());
+        softAssert.assertEquals(actualMoneyLeftAfterPurchase, expectedMoneyLeftAfterPurchase, "Wrong amount of money for " + product.getType() + " was deducted than expected.");
+        softAssert.assertEquals(actualVATAfterSellingAllProducts, 0.0, "VAT should be 0.0 after selling " + product.getType());
         softAssert.assertEquals(actualPriceAfterSellingAllProducts, 0.0, "Total price should be 0.0 after selling " + productType);
         softAssert.assertEquals(store.getCurrentAmountOfMoney(), 10000.0, "Not all money was returned to inital sum of 10.000:-");
         softAssert.assertAll();
